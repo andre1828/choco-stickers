@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 
-import pageBackground from "./initialPageBackground.svg"
+import chocorango from "./chocorango.svg"
+import background from "./background.svg"
 import buttonBackground from "./buttonBackground.png"
 import { useHistory } from "react-router"
 
@@ -8,6 +9,7 @@ function InitialPage() {
   const Background = styled.div`
     height: 100%;
     background-color: #fff9d9;
+    background-image: url(${background});
     display: grid;
     grid-template-areas: "char" "buttons";
     grid-template-rows: 80% auto;
@@ -41,7 +43,7 @@ function InitialPage() {
   return (
     <>
       <Background>
-        <Character src={pageBackground} />
+        <Character src={chocorango} />
         <AlbumButton onClick={() => history.push("/album")}>Album</AlbumButton>
         <StickersButton>Stickers</StickersButton>
       </Background>
