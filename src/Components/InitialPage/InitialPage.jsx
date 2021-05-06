@@ -1,5 +1,6 @@
 import styled from "@emotion/styled"
 
+import logo from "./logo.svg"
 import chocorango from "./chocorango.svg"
 import background from "./background.svg"
 import buttonBackground from "./buttonBackground.png"
@@ -10,13 +11,20 @@ function InitialPage() {
     height: 100%;
     background-color: #fff9d9;
     background-image: url(${background});
+    background-size: contain;
     display: grid;
-    grid-template-areas: "char" "buttons";
-    grid-template-rows: 80% auto;
+    grid-template-areas: "logo" "char" "buttons";
+    grid-template-rows: 10% 70% auto;
+  `
+  const Logo = styled.img`
+    width: 90%;
+    margin-top: 5vh;
+    margin-right: auto;
+    margin-left: auto;
+    grid-area: logo;
   `
   const Character = styled.img`
-    overflow-y: hidden;
-    height: 100%;
+    width: 70%;
     margin-right: auto;
     margin-left: auto;
     grid-area: char;
@@ -43,6 +51,7 @@ function InitialPage() {
   return (
     <>
       <Background>
+        <Logo src={logo} />
         <Character src={chocorango} />
         <AlbumButton onClick={() => history.push("/album")}>Album</AlbumButton>
         <StickersButton>Stickers</StickersButton>
