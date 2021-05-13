@@ -18,6 +18,7 @@ function InitialPage() {
   `
   const Logo = styled.img`
     width: 90%;
+    max-width: 482px;
     margin-top: 5vh;
     margin-right: auto;
     margin-left: auto;
@@ -25,13 +26,15 @@ function InitialPage() {
   `
   const Character = styled.img`
     width: 70%;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: 467px;
+    display: block;
+    margin: auto;
     grid-area: char;
   `
   const Button = styled.button`
     height: 40%;
     width: 90%;
+    max-width: 720px;
     margin-right: auto;
     margin-left: auto;
     background-image: url(${buttonBackground});
