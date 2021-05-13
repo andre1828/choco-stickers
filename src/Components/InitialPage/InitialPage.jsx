@@ -10,6 +10,8 @@ import { useHistory } from "react-router"
 function InitialPage() {
   const Background = styled.div`
     height: 100%;
+    min-height: 480px;
+    min-width: 320px;
     background-color: #fff9d9;
     background-image: url(${background});
     background-size: contain;
