@@ -3,7 +3,8 @@ import styled from "@emotion/styled"
 import logo from "./logo.svg"
 import chocorango from "./chocorango.svg"
 import background from "./background.svg"
-import buttonBackground from "./buttonBackground.png"
+import albumBtnBackground from "./albumBtn.svg"
+import stickersBtnBackground from "./stickersBtn.svg"
 import { useHistory } from "react-router"
 
 function InitialPage() {
@@ -37,16 +38,20 @@ function InitialPage() {
     max-width: 720px;
     margin-right: auto;
     margin-left: auto;
-    background-image: url(${buttonBackground});
-    background-size: 100% 100%;
+    border-style: none;
     grid-area: buttons;
+    background: none;
+    background-size: contain;
+    background-repeat: no-repeat;
   `
   const AlbumButton = styled(Button)`
     margin-bottom: auto;
+    background-image: url(${albumBtnBackground});
   `
   const StickersButton = styled(Button)`
     margin-top: auto;
     margin-bottom: 15px;
+    background-image: url(${stickersBtnBackground});
   `
 
   const history = useHistory()
